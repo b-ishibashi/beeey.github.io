@@ -2,10 +2,15 @@ body {
     background: pink;
 }
 .container {
-    width: 800px;
-    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+}
+@media screen and (min-width: 800px)  {
+    .container {
+        width: 800px;
+        margin-top: 30px;
+    }
 }
 table {
     background: LavenderBlush;
@@ -29,4 +34,20 @@ td.no-left, th.no-left {
 }
 td.no-top, th.no-top {
     border-top: 0;
+}
+caption {
+    font-size: 120%;
+    margin: 10px;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color: blue;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: red;
 }
