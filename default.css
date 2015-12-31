@@ -19,6 +19,10 @@ body {
     }
 }
 @media screen and (max-width: 799px) { /* Mobile向け専用 */
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
     table {
         width: 90%;
     }
