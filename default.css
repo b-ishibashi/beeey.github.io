@@ -2,52 +2,56 @@ body {
     background: pink;
 }
 .container {
-    margin-left: auto;
+    /* block要素を中央揃えする (widthを固定したときのみ意味を持つ) */
+    margin-left: auto; /* margin:外側の余白 */
     margin-right: auto;
+    /* inline要素 (ここではinline-tableがメインターゲット) を中央揃えする。 */
     text-align: center;
 }
-@media screen and (min-width: 800px)  {
+@media screen and (min-width: 800px)  { /* PC向け専用 */
     .container {
         width: 800px;
-        margin-top: 30px;
     }
 }
+
 table {
     background: LavenderBlush;
-    border-spacing: 0;
-    display: inline-table;
-    border: 2px #2b2b2b solid;
-    vertical-align: top;
+    border-spacing: 0; /* セル同士の間隔を表す (0のときは間隔なしだがcollapseと違って完全に重ならない) */
+    display: inline-table; /* PC向けデザインで横に並べたいのでinlineにする必要がある */
+    border: 2px #2b2b2b solid; /*テーブル(全体)の外枠の線の種類を指定*/
+    vertical-align: top; /*inlineテーブルの配置をtopに持ってくる(テーブルが横に並んだ時のみ適用)*/
 }
 th {
     font-size: 130%;
     color: HotPink;
 }
 td, th {
+    /*各セルの左と上だけにdashedラインをつける*/
     border-left: 1px #2b2b2b dashed;
     border-top: 1px #2b2b2b dashed;
-    text-align: center;
-    padding: 2px;
+
+    padding: 2px; /*内側の余白*/
 }
 td.no-left, th.no-left {
-    border-left: 0;
+    border-left: 0; /*tableのborder-leftと重なっているdashedを消す */
 }
 td.no-top, th.no-top {
-    border-top: 0;
+    border-top: 0; /*tableのborder-topと重なっているdashedを消す */
 }
 caption {
     font-size: 120%;
     margin: 10px;
 }
+
 a {
     text-decoration: none;
 }
 a:link {
-    color: blue;
+    color: blue; /*クリック前のリンクの色*/
 }
 a:visited {
-    color: blue;
+    color: blue; /*クリック後のリンクの色*/
 }
 a:hover {
-    color: red;
+    color: red; /*リンクにカーソルを合わせた時の色*/
 }
